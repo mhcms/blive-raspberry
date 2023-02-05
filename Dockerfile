@@ -15,5 +15,5 @@ RUN echo "?package(bash):needs=\"X11\" section=\"DockerCustom\" title=\"OBS Scre
 WORKDIR /root/blive
 # RUN wget https://github.com/smilecc/blive-raspberry/releases/download/v2.0.1/blive_linux_amd64
 # RUN mv blive_linux_amd64 blive
-COPY ./docker/blive_linux_amd64 ./blive/
+COPY ./docker/blive .
 
