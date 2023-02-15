@@ -13,7 +13,5 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 RUN echo "?package(bash):needs=\"X11\" section=\"DockerCustom\" title=\"OBS Screencast\" command=\"obs\"" >> /usr/share/menu/custom-docker && update-menus
 
 WORKDIR /root/blive
-# RUN wget https://github.com/smilecc/blive-raspberry/releases/download/v2.0.1/blive_linux_amd64
-# RUN mv blive_linux_amd64 blive
 COPY ./docker/blive .
-
+RUN chmod 777 blive
