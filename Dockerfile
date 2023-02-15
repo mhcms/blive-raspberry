@@ -15,7 +15,10 @@ RUN echo "?package(bash):needs=\"X11\" section=\"DockerCustom\" title=\"OBS Scre
 RUN wget https://mirrors.tuna.tsinghua.edu.cn/gnu/glibc/glibc-2.18.tar.gz
 RUN tar -xvf glibc-2.18.tar.gz
 RUN cd glibc-2.18
-RUN mkdir build && cd build && ../configure --prefix=/usr && make -j4 && make install
+RUN mkdir build \
+    && ../configure --prefix=/usr \
+    && make -j4 \
+    && make install
 
 WORKDIR /root/blive
 # RUN wget https://github.com/smilecc/blive-raspberry/releases/download/v2.0.1/blive_linux_amd64
